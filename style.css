@@ -1,0 +1,52 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-size: 45px;
+    font-family: 'Raleway', sans-serif;
+}
+
+.header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid gray;
+    padding: 30px;
+    border-radius: 5rem;
+    max-width: 45%;
+    margin: 30px auto 0px auto;
+}
+
+.jogador{
+    margin: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    display: grid;
+    grid-template-areas: 
+    "item1 item2 item3"
+    "item4 item5 item6"
+    "item7 item8 item9";
+    gap: 20px 20px;
+    background-color: rgb(0, 0, 0);
+    max-width: 17rem;
+    margin: 25px auto 0px auto;
+}
+
+.itens{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 5.37rem;
+    height: 3.2rem;
+    background-color: rgb(255, 255, 255);
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+.itens:hover{
+    background-color: rgb(192, 189, 189);
+}
