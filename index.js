@@ -2,6 +2,7 @@ const jogador = document.querySelector('.jogador')
 const theme = document.querySelector(':root')
 const itens = document.querySelectorAll('.itens')
 const buttonTheme = document.querySelector('.themeButton')
+const buttonFont = document.querySelector('#buttonFont')
 const main = document.querySelector('.main')
 
 let rodada = 1
@@ -13,14 +14,14 @@ buttonTheme.addEventListener('click', (ev)=>{
         theme.style.setProperty('--bg-color', 'rgb(44, 44, 44)')
         theme.style.setProperty('--ft-color', 'white')
         theme.style.setProperty('--tb-color', 'white')
-        buttonTheme.textContent = 'white theme'
+        buttonFont.textContent = 'white theme'
         main.dataset.theme = 'black'
 
     } else {    
         theme.style.setProperty('--bg-color', 'white')
         theme.style.setProperty('--ft-color', 'black')
         theme.style.setProperty('--tb-color', 'black')
-        buttonTheme.textContent = 'dark theme'
+        buttonFont.textContent = 'dark theme'
         main.dataset.theme = 'white'
     }
 })

@@ -39,7 +39,10 @@ body{
     background-color: transparent;
     transition: 0.4s;
     color: var(--ft-color);
-    font-size: 30px;
+}
+
+#buttonFont{
+    font-size: 25px;
 }
 
 .themeButton:hover{
@@ -61,7 +64,7 @@ body{
     "item7 item8 item9";
     gap: 20px 20px;
     background-color: var(--tb-color);
-    max-width: 17rem;
+    max-width: 16.8rem;
     margin: 25px auto 0px auto;
 }
 
@@ -78,4 +81,46 @@ body{
 
 .itens:hover{
     background-color: var(--bg-color);
+}
+
+@media(max-height: 652.8px){
+    * {
+        font-size: 30px;
+    }
+    #buttonFont{
+        font-size: 20px;
+    }
+}
+
+@media(max-width: 1069px){
+    *{
+        font-size: 25px;
+    }
+    
+    .header{
+        max-width:55%;
+    }
+
+    .container{
+        gap: 10px 10px;
+        margin-top: 50px;
+    }
+}
+
+@media(max-width: 735px){
+    .header{
+        max-width: 70%;
+    }
+}
+
+@media(max-width: 562px){
+    .header{
+        max-width: 95%;
+    }
+    *{
+        font-size: 20px;
+    }
+    #buttonFont{
+        font-size: 15px;
+    }
 }
