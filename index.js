@@ -1,11 +1,32 @@
-let jogador = document.querySelector('.jogador')
-
-let itens = document.querySelectorAll('.itens')
+const jogador = document.querySelector('.jogador')
+const theme = document.querySelector(':root')
+const itens = document.querySelectorAll('.itens')
+const buttonTheme = document.querySelector('.themeButton')
+const main = document.querySelector('.main')
 
 let rodada = 1
 let condicaoDeEmpate = false
 
+buttonTheme.addEventListener('click', (ev)=>{
+
+    if(main.dataset.theme === 'white'){
+        theme.style.setProperty('--bg-color', 'rgb(44, 44, 44)')
+        theme.style.setProperty('--ft-color', 'white')
+        theme.style.setProperty('--tb-color', 'white')
+        buttonTheme.textContent = 'white theme'
+        main.dataset.theme = 'black'
+
+    } else {    
+        theme.style.setProperty('--bg-color', 'white')
+        theme.style.setProperty('--ft-color', 'black')
+        theme.style.setProperty('--tb-color', 'black')
+        buttonTheme.textContent = 'dark theme'
+        main.dataset.theme = 'white'
+    }
+})
+
 document.querySelectorAll('.itens').forEach((item)=>{
+    
     item.addEventListener('mouseover', (ev)=>{
         if(item.dataset.value === ""){
             ev.currentTarget.style.backgroundColor = "rgb(146, 241, 135)"
@@ -17,7 +38,11 @@ document.querySelectorAll('.itens').forEach((item)=>{
 
 document.querySelectorAll('.itens').forEach((item)=>{
     item.addEventListener('mouseout', (ev)=>{
-        ev.currentTarget.style.backgroundColor = "white"
+        if(main.dataset.theme === 'white'){
+            ev.currentTarget.style.backgroundColor = "var(--bg-color)"
+        } else{
+            ev.currentTarget.style.backgroundColor = "var(--bg-color)"
+        }
     })
 })
 

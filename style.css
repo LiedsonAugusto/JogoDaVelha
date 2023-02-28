@@ -2,19 +2,48 @@
     padding: 0px;
     margin: 0px;
     box-sizing: border-box;
-    font-size: 45px;
+    font-size: 40px;
     font-family: 'Raleway', sans-serif;
+}
+
+:root{
+    --bg-color: rgb(255, 255, 255);
+    --ft-color: rgb(44, 44, 44);
+    --tb-color: black;
+}
+
+body{
+    background-color: var(--bg-color);
+    color: var(--ft-color);
 }
 
 .header{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     border: 2px solid gray;
     padding: 30px;
     border-radius: 5rem;
-    max-width: 45%;
+    max-width: 50%;
     margin: 30px auto 0px auto;
+}
+
+.switchThemeButton{
+    display: flex;
+}
+
+.themeButton{
+    padding: 5px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    background-color: transparent;
+    transition: 0.4s;
+    color: var(--ft-color);
+    font-size: 30px;
+}
+
+.themeButton:hover{
+    border-bottom: 2px solid var(--ft-color);
 }
 
 .jogador{
@@ -31,7 +60,7 @@
     "item4 item5 item6"
     "item7 item8 item9";
     gap: 20px 20px;
-    background-color: rgb(0, 0, 0);
+    background-color: var(--tb-color);
     max-width: 17rem;
     margin: 25px auto 0px auto;
 }
@@ -40,13 +69,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 5.37rem;
+    min-width: 3rem;
     height: 3.2rem;
-    background-color: rgb(255, 255, 255);
+    background-color: var(--bg-color);
     transition: 0.4s;
     cursor: pointer;
 }
 
 .itens:hover{
-    background-color: rgb(192, 189, 189);
+    background-color: var(--bg-color);
 }
